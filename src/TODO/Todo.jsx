@@ -15,6 +15,7 @@ const Todo = () => {
     const [todoList, setTodoList] = useState([]);
     const [curIdx, setCurIdx] = useState(0);
     const [search, setSearch] = useState("");
+    const [completed, setCompleted] = useState(false);
 
     // add todo
     const addTodo = () => {
@@ -44,6 +45,11 @@ const Todo = () => {
         setOpen(false);
     }
 
+    // task completion
+    const handleCheckbox = () => {
+        // completed = !completed;
+    }
+
     return (
         <div className='todo-container'>
             {/* Header logo and search box of todo */}
@@ -69,7 +75,7 @@ const Todo = () => {
                         }).map((ele, i) => (
                             <div key={i} className="data-values">
                                 {/* display todo task and remove button */}
-                                <p>{ele.todo}</p>
+                                <p><input type='checkbox'  onClick={handleCheckbox} />{ele.todo}</p>
                                 <Button onClick={()=>handleClickOpen(i)} color="error" > <DeleteIcon /></Button>
                                     <Dialog
                                         open={open}
