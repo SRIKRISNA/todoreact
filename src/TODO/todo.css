@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.todoLists{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+.data-display{
+    margin: 0;
+    border: 1px solid purple;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    max-width:fit-content;
+}
+.data-values{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    line-break: strict;
+}
+.heading{
+    color: white;
+    background: purple;
+}
+.heading h4{
+    padding: 7px 50px;
+}
+h1, h2, h3, h4, h5, h6, p{
+    padding: 5px;
+    margin: 0;
+}
+input, button{
+    padding: 7px 15px;
+}
+/* header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0 auto; */
+    padding: 10px 120px;
+}
+.searchbox input{
+    border-radius: 30px;
+    outline: none;
+    padding: 9px 15px;
+}
+
+/* mobile only */
+@media screen and (max-width: 600px) {
+    .header-container{
+        display: flex;
+        padding: 7px 10px !important;
+        justify-content: space-around;
+    }
+    .logo{
+        font-size: 12px;
+    }
+    .heading h4{
+        padding: 6px 25px;
+    }
+}
